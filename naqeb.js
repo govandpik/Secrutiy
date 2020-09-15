@@ -644,9 +644,9 @@ naqeb.on("message", zaid => {
       .addField("**__چەناڵەکەن__** : ", `→ ${naqeb.channels.size} `, true)
       .addField("**__میمبەرەکان__** : ", `→ ${naqeb.users.size} `, true)
       .addField("**__ناوی بۆتەکە__** : ", `→ ${naqeb.user.tag} `, true)
-      .addField("**دروست کەری بۆتەکە** : ", `→ Robot.GENT#0360 `)
+      .addField("**دروست کەری بۆتەکە** : ", `→ !                  LastシJACK#0001 `)
 
-      .setImage("https://media.discordapp.net/attachments/755466674878283799/755475558694912121/image0.gif")//rmek ba fle xot
+      .setImage("https://media.discordapp.net/attachments/696808930923380856/738348497434181703/image0.gif")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
     zaid.channel.send(bot);
   }
@@ -715,7 +715,7 @@ naqeb.on("message", async message => {
       .setTitle(
         "**__کلیک لێرە بکە بۆ ئەوەی بۆت ئەکە ئینڤاتی سێرڤەری خۆت بکەی💖__**"
       )
-      .setURL(`https://discord.com/api/oauth2/authorize?client_id=702092602329006180&permissions=8&scope=bot `);//linke botaka lera dane
+      .setURL(`https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot `);//linke botaka lera dane
     message.channel.sendEmbed(invite);
   }
 });
@@ -724,7 +724,7 @@ naqeb.on("message", message => {
     let embed = new Discord.RichEmbed()
       .setAuthor(message.author.username)
       .setColor("RANDOM")
-      .addField("https://discord.gg/NDBhCyE", " linke server ");
+      .addField("la estada hech servere neya", " linke server ");
 
     message.channel.sendEmbed(embed);
   }
@@ -761,4 +761,4 @@ naqeb.on("message", message => {
   }
 });
 
-naqeb.login("NzAyMDkyNjAyMzI5MDA2MTgw.Xp7AsA.p3gef-PHExwmJwR9226v59LBX-8");
+naqeb.login("NzE5MTU5NjYxNDcwODEwMTMz.XtzXoA.vD9A_id6s6kkdd6fmSHgjAiXmKg");
