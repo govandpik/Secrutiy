@@ -644,7 +644,7 @@ naqeb.on("message", zaid => {
       .addField("**__چەناڵەکەن__** : ", `→ ${naqeb.channels.size} `, true)
       .addField("**__میمبەرەکان__** : ", `→ ${naqeb.users.size} `, true)
       .addField("**__ناوی بۆتەکە__** : ", `→ ${naqeb.user.tag} `, true)
-      .addField("**دروست کەری بۆتەکە** : ", `→ !                  LastシJACK#0001 `)
+      .addField("**دروست کەری بۆتەکە** : ", `→ <@605816441677152266> `)
 
       .setImage("https://media.discordapp.net/attachments/696808930923380856/738348497434181703/image0.gif")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
@@ -713,7 +713,7 @@ naqeb.on("message", async message => {
       .setAuthor(message.author.username, message.author.displayAvatarURL)
       .setThumbnail(message.author.avatarURL)
       .setTitle(
-        "**__کلیک لێرە بکە بۆ ئەوەی بۆت ئەکە ئینڤاتی سێرڤەری خۆت بکەی💖__**"
+        "**__click here to invite bot your server__**"
       )
       .setURL(`https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot `);//linke botaka lera dane
     message.channel.sendEmbed(invite);
