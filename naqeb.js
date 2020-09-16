@@ -594,7 +594,7 @@ naqeb.on("message", async message => {
   if (antibot === null) antibot = "off";
 
   if (cmd === "antibot") {
-    if (!message.guild.member(message.author).hasPermission("Owner"))
+    if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
       return message.reply(`Only OWNER can use this command`);
     if (!args[0])
       return message.reply(
