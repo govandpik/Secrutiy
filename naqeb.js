@@ -702,8 +702,8 @@ naqeb.on("message", message => {
 
 
 naqeb.on("ready", () => {
-  naqeb.user.setActivity("N!help ", { type: "Playing" });
-  naqeb.user.setStatus("idle");
+  naqeb.user.setActivity("N!help | its time secruity to your server", { type: "Playing" });
+  naqeb.user.setStatus("Playing");
 });
 
 naqeb.on("message", async message => {
