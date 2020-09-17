@@ -5,7 +5,7 @@ const wait = require("util").promisify(setTimeout);
 const moment = require("moment");
 const fs = require("fs");
 var prefix = "N!";
-
+var prefix = "n!";
 
 
 
@@ -579,7 +579,7 @@ const db = require("quick.db"); // npm i quick.db
 
 naqeb.on("message", async message => {
   const prefix = "N!"; //comand
-
+  const prefix = "n!"; //comand 
   if (message.author.bot) return;
   if (!message.guild) return;
   if (!message.content.startsWith(prefix)) return;
@@ -640,11 +640,11 @@ naqeb.on("message", zaid => {
         ` ${Date.now() - zaid.createdTimestamp}` + "__ __ ",
         true
       )
-      .addField("**__سێرڤەرەکان__** : ", `→ ${naqeb.guilds.size}`, true)
-      .addField("**__چەناڵەکەن__** : ", `→ ${naqeb.channels.size} `, true)
-      .addField("**__میمبەرەکان__** : ", `→ ${naqeb.users.size} `, true)
-      .addField("**__ناوی بۆتەکە__** : ", `→ ${naqeb.user.tag} `, true)
-      .addField("**دروست کەری بۆتەکە** : ", `→ <@605816441677152266> `)
+      .addField("**__servers__** : ", `→ ${naqeb.guilds.size}`, true)
+      .addField("**__channels__** : ", `→ ${naqeb.channels.size} `, true)
+      .addField("**__members__** : ", `→ ${naqeb.users.size} `, true)
+      .addField("**__name bots __** : ", `→ ${naqeb.user.tag} `, true)
+      .addField("** The builder of the robot** : ", `→ <@605816441677152266> `)
 
       .setImage("https://media.discordapp.net/attachments/696808930923380856/738348497434181703/image0.gif")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
@@ -657,7 +657,7 @@ naqeb.on("message", async message => {
   if (message.content === prefix + "unbansall") {
     var user = message.mentions.users.first();
     if (!message.member.hasPermission("ADMINISTRATOR"))
-      return message.channel.send("❌|**`ADMINISTRATOR`ببورە تۆ ناتوانی `**");
+      return message.channel.send("❌|**`ADMINISTRATOR`Sorry, you can't. `**");
     if (!message.guild.member(naqeb.user).hasPermission("BAN_MEMBERS"))
       return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
     const guild = message.guild;
@@ -667,14 +667,14 @@ naqeb.on("message", async message => {
         message.guild.unban(ns);
         const embed = new Discord.RichEmbed()
           .setColor("RANDOM")
-          .setDescription(`**:white_check_mark: هەموو باندەكان لادرا**`)
+          .setDescription(`**:white_check_mark: All bands were removed**`)
           .setFooter(
-            "داواكرا لە لایەن" + message.author.username,
+            "requested by" + message.author.username,
             message.author.avatarURL
           );
         message.channel.sendEmbed(embed);
         guild.owner.send(`Server : ${guild.name}
-‎  **هەموو باندەكان لادرا لەلایەن** : <@${message.author.id}>`);
+‎  **unbands all in ** : <@${message.author.id}>`);
       });
     });
   }
@@ -687,7 +687,7 @@ naqeb.on("message", message => {
     if (!message.guild.member(naqeb.user).hasPermission("MOVE_MEMBERS"))
       return message.reply("x I Dont Have Perms MOVE_MEMBERS");
     if (message.member.voiceChannel == null)
-      return message.channel.send("تۆ پێویستە لە ڤۆیسێكا بیت");
+      return message.channel.send("please join the any voice");
     var author = message.member.voiceChannelID;
     var m = message.guild.members.filter(m => m.voiceChannel);
     message.guild.members
@@ -735,13 +735,13 @@ naqeb.on("message", message => {
       return message.reply(" This command only for servers");
 
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
-      return message.reply(" تۆناتوانی ئەم کارە بکەی");
+      return message.reply("please dot tech the command");
     message.channel
       .overwritePermissions(message.guild.id, {
         SEND_MESSAGES: false
       })
       .then(() => {
-        message.reply(":white_check_mark::lock: بە سەرکەوتوی داخرا ");
+        message.reply(":white_check_mark::lock now locked channels ");
       });
   }
   //FIRE BOT
@@ -750,13 +750,13 @@ naqeb.on("message", message => {
       return message.reply(" This command only for servers");
 
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
-      return message.reply("تۆناتوانی ئەم کارە بکەی");
+      return message.reply("please dot tech the command");
     message.channel
       .overwritePermissions(message.guild.id, {
         SEND_MESSAGES: true
       })
       .then(() => {
-        message.reply(":white_check_mark::unlock: بە سەرکەوتوی کرایەوە ");
+        message.reply(":white_check_mark::unlock: now unlock channels ");
       });
   }
 });
