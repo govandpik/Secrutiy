@@ -635,7 +635,7 @@ naqeb.on("message", zaid => {
       .setAuthor(naqeb.user.username, naqeb.user.avatarURL)
       .setColor("#00000")
       .addField(
-        "**____خێرای بۆتەکە____**: ",
+        "**____ping bots ____**: ",
         ` ${Date.now() - zaid.createdTimestamp}` + "__ __ ",
         true
       )
