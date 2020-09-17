@@ -5,7 +5,6 @@ const wait = require("util").promisify(setTimeout);
 const moment = require("moment");
 const fs = require("fs");
 var prefix = "N!";
-var prefix = "n!";
 
 
 
@@ -579,7 +578,7 @@ const db = require("quick.db"); // npm i quick.db
 
 naqeb.on("message", async message => {
   const prefix = "N!"; //comand
-  const prefix = "n!"; //comand 
+ 
   if (message.author.bot) return;
   if (!message.guild) return;
   if (!message.content.startsWith(prefix)) return;
