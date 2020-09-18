@@ -546,20 +546,6 @@ naqeb.on("message", async message => {
 |::${prefix}settings time <number>
 |::${prefix}antibot on
 |::${prefix}antibot off
-|::${prefix}admin
-`);
-    message.channel.sendEmbed(help);
-  }
-});
-naqeb.on("message", async message => {
-  if (message.content.startsWith(prefix + "admin")) {
-    /// security bot
-    let help = new Discord.RichEmbed()
-      .setColor("#010000")
-      .setThumbnail(message.author.avatarURL).setDescription(`
-                 The prefix for the bot is: /   
-
-|::settings 
 |::${prefix}bot
 |::${prefix}lock
 |::${prefix}unlock
