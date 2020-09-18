@@ -4,7 +4,7 @@ const invites = {};
 const wait = require("util").promisify(setTimeout);
 const moment = require("moment");
 const fs = require("fs");
-var prefix = "N!";
+var prefix = "a!";
 
 
 
@@ -535,7 +535,7 @@ naqeb.on("message", async message => {
     let help = new Discord.RichEmbed()
       .setColor("#010000")
       .setThumbnail(message.author.avatarURL).setDescription(`
-      .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")
+   
                  The prefix for the bot is: /   
 
 |::settings 
@@ -564,7 +564,7 @@ naqeb.on("message", async message => {
 const db = require("quick.db"); // npm i quick.db
 
 naqeb.on("message", async message => {
-  const prefix = "N!"; //comand
+  const prefix = "a!"; //comand
  
   if (message.author.bot) return;
   if (!message.guild) return;
@@ -688,7 +688,7 @@ naqeb.on("message", message => {
 
 
 naqeb.on("ready", () => {
-  naqeb.user.setActivity("N!help | its time secruity to your server", { type: "Playing" });
+  naqeb.user.setActivity("a!help | its time secruity to your server", { type: "Playing" });
   naqeb.user.setStatus("Playing");
 });
 
