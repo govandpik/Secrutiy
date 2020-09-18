@@ -535,6 +535,7 @@ naqeb.on("message", async message => {
     let help = new Discord.RichEmbed()
       .setColor("#010000")
       .setThumbnail(message.author.avatarURL).setDescription(`
+      .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")
                  The prefix for the bot is: /   
 
 |::settings 
@@ -631,7 +632,7 @@ naqeb.on("message", zaid => {
       .addField("**__name bots __** : ", `→ ${naqeb.user.tag} `, true)
       .addField("** The builder of the robot** : ", `→ <@605816441677152266> `)
 
-      .setImage("https://media.discordapp.net/attachments/696808930923380856/738348497434181703/image0.gif")//rmek ba fle xot
+      .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
     zaid.channel.send(bot);
   }
