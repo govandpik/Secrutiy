@@ -624,11 +624,15 @@ naqeb.on("message", zaid => {
     
 
 
-      .addField("**Name**", `${naqeb.user.tag} `, true)
+      .addField("**Name bots**", `${naqeb.user.tag} `, true)
+ 
       .addField("**Server**", `${naqeb.guilds.size}`, true)
 
       .addField("**Members**", `${naqeb.users.size} `, true)
-      .addField("**Owner**",`<562392176793747456> `)
+
+      .addField("**Owner**",`<@562392176793747456> `)
+
+      .addField("**CO LEADER**",`<@562392176793747456> `)
 
       .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
