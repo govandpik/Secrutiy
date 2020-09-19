@@ -555,10 +555,6 @@ naqeb.on("message", async message => {
 **${prefix}invite**
 
 
-      .setTitle(
-        "**__support__**"
-      );
-      .setURL(`https://discord.gg/YzBDHBh`);
 
 
     message.channel.sendEmbed(help);
