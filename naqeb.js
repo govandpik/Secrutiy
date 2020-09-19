@@ -15,7 +15,7 @@ var prefix = "a!";
 
 naqeb.on('ready', () => {
   console.log(`Logged in as ${naqeb.user.tag}!`);
- naqeb.user.setActivity("N!help",{type: 'Playing'})
+ naqeb.user.setActivity("a!help",{type: 'Playing'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -536,25 +536,25 @@ naqeb.on("message", async message => {
       .setColor("#010000")
       .setThumbnail(message.author.avatarURL).setDescription(`
    
-                 The prefix for the bot is: /   
+                **The prefix for the bot is**
 
-|::settings 
-|::${prefix}settings kick <number>
-|::${prefix}settings roleD <number>
-|::${prefix}settings roleC <number>
-|::${prefix}settings ban <number>
-|::${prefix}settings channelD <number>
-|::${prefix}settings time <number>
-|::${prefix}antibot on
-|::${prefix}antibot off
-|::${prefix}bot
-|::${prefix}lock
-|::${prefix}unlock
-|::${prefix}unbansall
-|::${prefix}muvall
-|::${prefix}invbot
-|::${prefix}support
-|::${prefix}help
+
+**${prefix}settings kick <number>**
+**${prefix}settings roleD <number>**
+**${prefix}settings roleC <number>**
+**${prefix}settings ban <number>**
+**${prefix}settings channelD <number>**
+**${prefix}settings time <number>**
+**${prefix}antibot on**
+**${prefix}antibot off**
+**${prefix}bot**
+**${prefix}lock**
+**${prefix}unlock**
+**${prefix}unbansall**
+**${prefix}movall**
+**${prefix}invite**
+**${prefix}support**
+
 `);
     message.channel.sendEmbed(help);
   }
@@ -620,17 +620,18 @@ naqeb.on("message", zaid => {
   if (zaid.content === prefix + "bot") {
     const bot = new Discord.RichEmbed()
       .setAuthor(naqeb.user.username, naqeb.user.avatarURL)
-      .setColor("#00000")
-      .addField(
-        "**____ping bots ____**: ",
-        ` ${Date.now() - zaid.createdTimestamp}` + "__ __ ",
+      .setColor("#FF0000")
+    
+
+` ${Date.now() - zaid.createdTimestamp}` + "__ __ ",
         true
       )
-      .addField("**__servers__** : ", `→ ${naqeb.guilds.size}`, true)
-      .addField("**__channels__** : ", `→ ${naqeb.channels.size} `, true)
-      .addField("**__members__** : ", `→ ${naqeb.users.size} `, true)
-      .addField("**__name bots __** : ", `→ ${naqeb.user.tag} `, true)
-      .addField("** The builder of the robot** : ", `→ <@605816441677152266> `)
+      .addField("**Name**", `${naqeb.user.tag} `, true)
+      .addField("**Server**", `${naqeb.guilds.size}`, true)
+
+      .addField("**Members**", `${naqeb.users.size} `, true)
+      .addField("**Owner**",`<562392176793747456> `)
+      .addField("**Co Owner**", `<605816441677152266> `)
 
       .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
@@ -667,7 +668,7 @@ naqeb.on("message", async message => {
 });
 
 naqeb.on("message", message => {
-  if (message.content.startsWith(prefix + "muvall")) {
+  if (message.content.startsWith(prefix + "movall")) {
     if (!message.member.hasPermission("MOVE_MEMBERS"))
       return message.channel.send("x You Dont Have Perms MOVE_MEMBERS");
     if (!message.guild.member(naqeb.user).hasPermission("MOVE_MEMBERS"))
@@ -688,12 +689,12 @@ naqeb.on("message", message => {
 
 
 naqeb.on("ready", () => {
-  naqeb.user.setActivity("a!help | its time secruity to your server", { type: "Playing" });
+  naqeb.user.setActivity("a!help | it's time secruity to your server!", { type: "Playing" });
   naqeb.user.setStatus("Playing");
 });
 
 naqeb.on("message", async message => {
-  if (message.content.startsWith(prefix + "invbot")) {
+  if (message.content.startsWith(prefix + "invite")) {
     let invite = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setAuthor(message.author.username, message.author.displayAvatarURL)
