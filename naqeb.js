@@ -536,7 +536,7 @@ naqeb.on("message", async message => {
       .setColor("#FF0000")
       .setThumbnail(message.author.avatarURL).setDescription(`
    
-                **The prefix for the bot is**:a!
+                **The prefix for the bot is**: a!
 
 
 **${prefix}settings kick <number>**
@@ -560,7 +560,7 @@ naqeb.on("message", async message => {
       )
       .setURL(`https://discord.gg/YzBDHBh`);
 
-`);
+
     message.channel.sendEmbed(help);
   }
 });
