@@ -631,7 +631,6 @@ naqeb.on("message", zaid => {
 
       .addField("**Members**", `${naqeb.users.size} `, true)
       .addField("**Owner**",`<562392176793747456> `)
-      .addField("**Co Owner**", `<605816441677152266> `)
 
       .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")//rmek ba fle xot
       .setFooter(zaid.author.username, zaid.author.avatarURL);
