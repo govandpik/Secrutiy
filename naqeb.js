@@ -553,7 +553,7 @@ naqeb.on("message", async message => {
 **${prefix}unbansall**
 **${prefix}movall**
 **${prefix}invite**
-
+.addField("[support](https://discord.gg/YzBDHBh) - [invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot")
 
        
 
