@@ -623,9 +623,7 @@ naqeb.on("message", zaid => {
       .setColor("#FF0000")
     
 
-` ${Date.now() - zaid.createdTimestamp}` + "__ __ ",
-        true
-      )
+
       .addField("**Name**", `${naqeb.user.tag} `, true)
       .addField("**Server**", `${naqeb.guilds.size}`, true)
 
