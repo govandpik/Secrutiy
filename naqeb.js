@@ -630,7 +630,7 @@ naqeb.on("message", zaid => {
 
       .addField("**Members**", `${naqeb.users.size} `, true)
 
-      .addField("**Owner**",`<@605816441677152266 > `)
+      .addField("**Owner**",`<@605816441677152266> `)
 
       .addField("**CO LEADER**",`<@562392176793747456> `)
 
