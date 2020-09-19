@@ -4,7 +4,7 @@ const invites = {};
 const wait = require("util").promisify(setTimeout);
 const moment = require("moment");
 const fs = require("fs");
-var prefix = "a!";
+var prefix = "t!";
 
 
 
@@ -536,7 +536,7 @@ naqeb.on("message", async message => {
       .setColor("#FF0000")
       .setThumbnail(message.author.avatarURL).setDescription(`
    
-                **The prefix for the bot is**: a!
+                **The prefix for the bot is**: t!
 
 
 **${prefix}settings kick <number>**
@@ -555,6 +555,8 @@ naqeb.on("message", async message => {
 **${prefix}invite**
 
 
+       
+
     `)
     
     message.channel.sendEmbed(help);
@@ -565,7 +567,7 @@ naqeb.on("message", async message => {
 const db = require("quick.db"); // npm i quick.db
 
 naqeb.on("message", async message => {
-  const prefix = "a!"; //comand
+  const prefix = "t!"; //comand
  
   if (message.author.bot) return;
   if (!message.guild) return;
@@ -691,7 +693,7 @@ naqeb.on("message", message => {
 
 
 naqeb.on("ready", () => {
-  naqeb.user.setActivity("a!help | it's time secruity to your server!", { type: "Playing" });
+  naqeb.user.setActivity("t!help | it's time secruity to your server!", { type: "Playing" });
   naqeb.user.setStatus("Playing");
 });
 
