@@ -15,7 +15,7 @@ var prefix = "t!";
 
 naqeb.on('ready', () => {
   console.log(`Logged in as ${naqeb.user.tag}!`);
- naqeb.user.setActivity("a!help",{type: 'Playing'})
+ naqeb.user.setActivity("t!help",{type: 'Playing'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -697,29 +697,6 @@ naqeb.on("ready", () => {
   naqeb.user.setStatus("Playing");
 });
 
-naqeb.on("message", async message => {
-  if (message.content.startsWith(prefix + "invite")) {
-    let invite = new Discord.RichEmbed()
-      .setColor("#FF0000")
-      .setAuthor(message.author.username, message.author.displayAvatarURL)
-      .setThumbnail(message.author.avatarURL)
-      .setTitle(
-        "**__click here to invite bot your server__**"
-      )
-      .setURL(`https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot `);//linke botaka lera dane
-    message.channel.sendEmbed(invite);
-  }
-});
-naqeb.on("message", message => {
-  if (message.content === prefix + "support") {
-    let embed = new Discord.RichEmbed()
-      .setAuthor(message.author.username)
-      .setColor("#FF0000")
-      .addField("la estada hech servere neya", " linke server ");
-
-    message.channel.sendEmbed(embed);
-  }
-});
 naqeb.on("message", message => {
   if (message.content === prefix + "lock") {
     if (!message.channel.guild)
