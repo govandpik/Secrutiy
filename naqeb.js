@@ -553,7 +553,12 @@ naqeb.on("message", async message => {
 **${prefix}unbansall**
 **${prefix}movall**
 **${prefix}invite**
-**${prefix}support**
+
+
+      .setTitle(
+        "**__support__**"
+      )
+      .setURL(`https://discord.gg/YzBDHBh`);
 
 `);
     message.channel.sendEmbed(help);
