@@ -632,9 +632,9 @@ naqeb.on("message", zaid => {
 
       .addField("**Members**", `${naqeb.users.size} `, true)
 
-      .addField("**Owner**",`<@562392176793747456> `)
+      .addField("**Owner**",`<@605816441677152266> `)
 
-      .addField("**CO Owner**",`<@605816441677152266> `)
+      .addField("**Co Owner**",`<@562392176793747456> `)
 
     zaid.channel.send(bot);
   }
