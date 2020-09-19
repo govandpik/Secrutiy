@@ -63,7 +63,7 @@ naqeb.on("message", message => {
       roleCrLimits: 3,
       time: 30
     };
-  if (message.content.startsWith(prefix + "settings ")) {
+  if (message.content.startsWith(prefix + "settings")) {
     if (!message.member.hasPermission("ADMINISTRATOR")) return;
 
     if (message.content.startsWith(prefix + "settings ban")) {
