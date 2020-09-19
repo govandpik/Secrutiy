@@ -533,10 +533,10 @@ naqeb.on("message", async message => {
   if (message.content.startsWith(prefix + "help")) {
     /// security bot
     let help = new Discord.RichEmbed()
-      .setColor("#010000")
+      .setColor("#FF0000")
       .setThumbnail(message.author.avatarURL).setDescription(`
    
-                **The prefix for the bot is**
+                **The prefix for the bot is**:a!
 
 
 **${prefix}settings kick <number>**
@@ -619,23 +619,23 @@ naqeb.on("guildMemberAdd", async member => {
 naqeb.on("message", zaid => {
   if (zaid.content === prefix + "bot") {
     const bot = new Discord.RichEmbed()
-      .setAuthor(naqeb.user.username, naqeb.user.avatarURL)
+      .setAuthor("")
       .setColor("#FF0000")
     
 
 
-      .addField("**Name bots**", `${naqeb.user.tag} `, true)
- 
+      .addField("**Name**", `${naqeb.user.tag} `, true)
+       
+      .addField("**ID**",` 719159661470810133 `, true)
+    
       .addField("**Server**", `${naqeb.guilds.size}`, true)
 
       .addField("**Members**", `${naqeb.users.size} `, true)
 
-      .addField("**Owner**",`<@605816441677152266> `)
+      .addField("**Owner**",`<@562392176793747456> `)
 
-      .addField("**CO LEADER**",`<@562392176793747456> `)
+      .addField("**CO Owner**",`<@605816441677152266> `)
 
-      .setImage("https://media.discordapp.net/attachments/756271787511382097/756632260954030171/image0.png")//rmek ba fle xot
-      .setFooter(zaid.author.username, zaid.author.avatarURL);
     zaid.channel.send(bot);
   }
 });
@@ -654,7 +654,7 @@ naqeb.on("message", async message => {
       ba.forEach(ns => {
         message.guild.unban(ns);
         const embed = new Discord.RichEmbed()
-          .setColor("RANDOM")
+          .setColor("#FF0000")
           .setDescription(`**:white_check_mark: All bands were removed**`)
           .setFooter(
             "requested by" + message.author.username,
@@ -697,7 +697,7 @@ naqeb.on("ready", () => {
 naqeb.on("message", async message => {
   if (message.content.startsWith(prefix + "invite")) {
     let invite = new Discord.RichEmbed()
-      .setColor("RANDOM")
+      .setColor("#FF0000")
       .setAuthor(message.author.username, message.author.displayAvatarURL)
       .setThumbnail(message.author.avatarURL)
       .setTitle(
@@ -711,7 +711,7 @@ naqeb.on("message", message => {
   if (message.content === prefix + "support") {
     let embed = new Discord.RichEmbed()
       .setAuthor(message.author.username)
-      .setColor("RANDOM")
+      .setColor("#FF0000")
       .addField("la estada hech servere neya", " linke server ");
 
     message.channel.sendEmbed(embed);
