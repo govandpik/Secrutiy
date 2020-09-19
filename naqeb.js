@@ -555,8 +555,8 @@ naqeb.on("message", async message => {
 **${prefix}invite**
 
 
-
-
+    `)
+    
     message.channel.sendEmbed(help);
   }
 });
