@@ -536,7 +536,7 @@ naqeb.on("message", async message => {
       .setColor("#FF0000")
       .setTimestamp()
       .setFooter("Sponsored By: N1 SQUAD")
-      .setAuthor(`https://cdn.discordapp.com/icons/584491260484648962/a_c12dee5ef013c83f4556666cb864b465.gif?size=1024`)
+      
       .setThumbnail(message.author.avatarURL).setDescription(`
       
                 **The prefix for the bot is**: t!
@@ -625,7 +625,7 @@ naqeb.on("guildMemberAdd", async member => {
 naqeb.on("message", zaid => {
   if (zaid.content === prefix + "bot") {
     const bot = new Discord.RichEmbed()
-      .setAuthor()
+      
       .setTimestamp()
       .setFooter("Sponsored By: N1 SQUAD")
       .setColor("#FF0000")
