@@ -535,7 +535,7 @@ naqeb.on("message", async message => {
     let help = new Discord.RichEmbed()
       .setColor("#FF0000")
       .setTimestamp()
-      .setFooter("Sponsored By: N1 SQUAD")
+      .setFooter("Sponsored By: Secrutiy ")
 
       .setThumbnail(message.author.avatarURL).setDescription(`
       
