@@ -554,7 +554,7 @@ naqeb.on("message", async message => {
 **${prefix}unlock**
 **${prefix}unbansall**
 **${prefix}movall**
-**[support](https://discord.gg/YzBDHBh)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)**
+**[support](https://discord.gg/YzBDHBh)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)** - **[website](https://secruity.glitch.me/)**
        
     `)
     
@@ -622,7 +622,7 @@ naqeb.on("message", zaid => {
   if (zaid.content === prefix + "bot") {
     const bot = new Discord.RichEmbed()
       .setTimestamp()
-      .setFooter("Sponsored By: N1 SQUAD")
+      .setFooter("Sponsored By: Secrutiy ")
       .setColor("#FF0000")
     
 
@@ -637,7 +637,6 @@ naqeb.on("message", zaid => {
 
       .addField("**Owner**",`<@605816441677152266> `)
 
-      .addField("**Co Owner**",`<@562392176793747456> `)
 
     zaid.channel.send(bot);
   }
