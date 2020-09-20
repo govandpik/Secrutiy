@@ -536,3 +536,197 @@ naqeb.on("message", async message => {
       .setColor("#FF0000")
       .setTimestamp()
       .setFooter("Sponsored By: N1 SQUAD")
+
+      .setThumbnail(message.author.avatarURL).setDescription(`
+      
+                **The prefix for the bot is**: t!
+**${prefix}settings kick <number>**
+**${prefix}settings roleD <number>**
+**${prefix}settings roleC <number>**
+**${prefix}settings ban <number>**
+**${prefix}settings channelD <number>**
+**${prefix}settings time <number>**
+**${prefix}antibot on**
+**${prefix}antibot off**
+**${prefix}bot**
+**${prefix}lock**
+**${prefix}unlock**
+**${prefix}unbansall**
+**${prefix}movall**
+**[support](https://discord.gg/YzBDHBh)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)**
+       
+    `)
+    
+    message.channel.sendEmbed(help);
+  }
+});
+
+
+const db = require("quick.db"); // npm i quick.db
+
+naqeb.on("message", async message => {
+  const prefix = "t!"; //comand
+ 
+  if (message.author.bot) return;
+  if (!message.guild) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  const args = message.content
+    .slice(prefix.length)
+    .trim()
+    .split(/ +/g);
+  const cmd = args.shift().toLowerCase();
+
+  let antibot = await db.fetch(`antibot_${message.guild.id}`);
+  if (antibot === null) antibot = "off";
+
+  if (cmd === "antibot") {
+    if (!message.guild.member(message.author).hasPermission("ADMINISTRATOR"))
+      return message.reply(`Only OWNER can use this command`);
+    if (!args[0])
+      return message.reply(
+        `___Do you want to enter the bot to your server?___ \`off / on\``
+      );
+
+    if (args[0] === "on") {
+      db.set(`antibot_${message.guild.id}`, "on");
+      message.reply(`Antibot is on`).RichEmbed();
+    }
+
+    if (args[0] === "off") {
+      db.set(`antibot_${message.guild.id}`, "off");
+      message.reply(`Antibot is off`).RichEmbed();
+    }
+  }
+});
+naqeb.on("guildMemberAdd", async member => {
+  let antibot = await db.fetch(`antibot_${member.guild.id}`);
+  if (antibot === "on") {
+    if (member.user.bot) member.kick("Anti bot is on !");
+  }
+});
+
+
+ 
+
+
+
+
+
+
+
+
+
+naqeb.on("message", zaid => {
+  if (zaid.content === prefix + "bot") {
+    const bot = new Discord.RichEmbed()
+      .setAuthor("https://images-ext-2.discordapp.net/external/okiO2xiHCr3uS6GJ6WY4e4rhdlJFmyLJndwccbi8qEU/https/images-ext-2.discordapp.net/external/BCt0yb4aPNKQ2kCrw5LSnTIEt7GGnpVFhoF1_2azGCM/%253Fsize%253D1024/https/cdn.discordapp.com/icons/584491260484648962/a_c12dee5ef013c83f4556666cb864b465.gif")
+      .setTimestamp()
+      .setFooter("Sponsored By: N1 SQUAD")
+      .setColor("#FF0000")
+    
+
+
+      .addField("**Name**", `${naqeb.user.tag} `, true)
+       
+      .addField("**ID**",` 719159661470810133 `, true)
+    
+      .addField("**Server**", `${naqeb.guilds.size}`, true)
+
+      .addField("**Members**", `${naqeb.users.size} `, true)
+
+      .addField("**Owner**",`<@605816441677152266> `)
+
+      .addField("**Co Owner**",`<@562392176793747456> `)
+
+    zaid.channel.send(bot);
+  }
+});
+
+
+naqeb.on("message", async message => {
+  if (message.content === prefix + "unbansall") {
+    var user = message.mentions.users.first();
+    if (!message.member.hasPermission("ADMINISTRATOR"))
+      return message.channel.send("❌|**`ADMINISTRATOR`Sorry, you can't. `**");
+    if (!message.guild.member(naqeb.user).hasPermission("BAN_MEMBERS"))
+      return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
+    const guild = message.guild;
+
+    message.guild.fetchBans().then(ba => {
+      ba.forEach(ns => {
+        message.guild.unban(ns);
+        const embed = new Discord.RichEmbed()
+          .setColor("#FF0000")
+          .setDescription(`**:white_check_mark: All bands were removed**`)
+          .setFooter(
+            "requested by" + message.author.username,
+            message.author.avatarURL
+          );
+        message.channel.sendEmbed(embed);
+        guild.owner.send(`Server : ${guild.name}
+‎  **unbands all in ** : <@${message.author.id}>`);
+      });
+    });
+  }
+});
+
+naqeb.on("message", message => {
+  if (message.content.startsWith(prefix + "movall")) {
+    if (!message.member.hasPermission("MOVE_MEMBERS"))
+      return message.channel.send("x You Dont Have Perms MOVE_MEMBERS");
+    if (!message.guild.member(naqeb.user).hasPermission("MOVE_MEMBERS"))
+      return message.reply("x I Dont Have Perms MOVE_MEMBERS");
+    if (message.member.voiceChannel == null)
+      return message.channel.send("please join the any voice");
+    var author = message.member.voiceChannelID;
+    var m = message.guild.members.filter(m => m.voiceChannel);
+    message.guild.members
+      .filter(m => m.voiceChannel)
+      .forEach(m => {
+        m.setVoiceChannel(author);
+      });
+    message.channel.send("white_check_mark: Success Moved All To Your Channel");
+  }
+});
+
+
+
+naqeb.on("ready", () => {
+  naqeb.user.setActivity("t!help | it's time secruity to your server!", { type: "Playing" });
+  naqeb.user.setStatus("Playing");
+});
+
+naqeb.on("message", message => {
+  if (message.content === prefix + "lock") {
+    if (!message.channel.guild)
+      return message.reply(" This command only for servers");
+
+    if (!message.member.hasPermission("MANAGE_MESSAGES"))
+      return message.reply("please dot tech the command");
+    message.channel
+      .overwritePermissions(message.guild.id, {
+        SEND_MESSAGES: false
+      })
+      .then(() => {
+        message.reply(":white_check_mark::lock now locked channels ");
+      });
+  }
+  //FIRE BOT
+  if (message.content === prefix + "unlock") {
+    if (!message.channel.guild)
+      return message.reply(" This command only for servers");
+
+    if (!message.member.hasPermission("MANAGE_MESSAGES"))
+      return message.reply("please dot tech the command");
+    message.channel
+      .overwritePermissions(message.guild.id, {
+        SEND_MESSAGES: true
+      })
+      .then(() => {
+        message.reply(":white_check_mark::unlock: now unlock channels ");
+      });
+  }
+});
+
+naqeb.login("NzE5MTU5NjYxNDcwODEwMTMz.XtzXoA.WwHiFnrV8uNfjgJeo3mHuLx7vW4");
