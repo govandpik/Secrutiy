@@ -554,6 +554,7 @@ naqeb.on("message", async message => {
 **${prefix}unlock**
 **${prefix}unbansall**
 **${prefix}movall**
+**${prefix}invite**
 **[support](https://discord.gg/9PravbR)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)** - **[website](https://secruity.glitch.me/)**
        
     `)
@@ -689,7 +690,17 @@ naqeb.on("message", message => {
   }
 });
 
-
+naqeb.on("message", async message => {
+  if (message.content.startsWith(prefix + "invite")) {
+    let invite = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setAuthor(message.author.username, message.author.displayAvatarURL)
+      .setThumbnail(message.author.avatarURL)
+      .setTitle("click here to invite botsparkling_heart")
+      .setURL(`https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot`);
+    message.channel.sendEmbed(invite);
+  }
+});
 
 naqeb.on("ready", () => {
   naqeb.user.setActivity("t!help | it's time secruity to your server!", { type: "Playing" });
