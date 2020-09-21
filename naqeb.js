@@ -523,12 +523,12 @@ naqeb.on("guildMemberRemove", async member => {
 
    
 
-client.on("message", message => {
+naqeb.on("message", message => {
   if (message.content === prefix + "settings") {
     if (!message.member.hasPermission("Ownership"))
       if (!message.channel.guild) return;
     if (message.content < 1023) return;
-    const mrfix = new Discord.RichEmbed()
+    const Embed = new Discord.RichEmbed()
       .setAuthor(client.user.username, client.user.avatarURL)
       .setThumbnail(client.user.avatarURL).setDescription(`AntiBan
 Enabled:🟢 
@@ -559,7 +559,7 @@ Enabled:🟢
 Maximum Time : ${config[message.guild.id].time}
 `);
 
-    message.channel.sendEmbed(mrfix);
+    message.channel.sendEmbed(Embed);
   }
 });
 
