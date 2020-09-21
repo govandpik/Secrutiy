@@ -44,13 +44,13 @@ const anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8")); // create 
 const config = JSON.parse(fs.readFileSync("./config.json", "UTF8")); // create config.json file with
 
 naqeb.on("message", message => {
-  if (message.content === prefix + "settings") {
+  if (message.content === prefix + "setting") {
     if (!message.member.hasPermission("ADMINISTRATOR"))
       if (!message.channel.guild) return;
     if (message.content < 1023) return;
     const Embed = new Discord.RichEmbed()
-      .setAuthor(client.user.username, client.user.avatarURL)
-      .setThumbnail(client.user.avatarURL).setDescription(`AntiBan
+      .setAuthor(naqeb.user.username, naqeb.user.avatarURL)
+      .setThumbnail(naqeb.user.avatarURL).setDescription(`AntiBan
 Enabled:🟢 
 Maximum Ban : ${config[message.guild.id].banLimit}
 -
