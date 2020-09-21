@@ -523,45 +523,6 @@ naqeb.on("guildMemberRemove", async member => {
 
    
 
-naqeb.on("message", message => {
-  if (message.content === prefix + "settings") {
-    if (!message.member.hasPermission("Ownership"))
-      if (!message.channel.guild) return;
-    if (message.content < 1023) return;
-    const Embed = new Discord.RichEmbed()
-      .setAuthor(client.user.username, client.user.avatarURL)
-      .setThumbnail(client.user.avatarURL).setDescription(`AntiBan
-Enabled:🟢 
-Maximum Ban : ${config[message.guild.id].banLimit}
--
-AntiKick
-Enabled:🟢 
-Maximum Kick : ${config[message.guild.id].kickLimits}
--
-AntiChannelD
-Enabled:🟢 
-Maximum Delete : ${config[message.guild.id].chaDelLimit}
--
-AntiChannelC
-Enabled:🟢 
-Maximum Create : ${config[message.guild.id].chaCrLimit}
--
-AntiRoleD
-Enabled:🟢 
-Maximum Delete : ${config[message.guild.id].roleDelLimit}
--
-AntiRoleC
-Enabled:🟢 
-Maximum Create : ${config[message.guild.id].roleCrLimits}
--
-AntiTime
-Enabled:🟢 
-Maximum Time : ${config[message.guild.id].time}
-`);
-
-    message.channel.sendEmbed(Embed);
-  }
-});
 
    
 
@@ -683,6 +644,46 @@ naqeb.on("message", zaid => {
   }
 });
 
+
+naqeb.on("message", message => {
+  if (message.content === prefix + "settings") {
+    if (!message.member.hasPermission("Ownership"))
+      if (!message.channel.guild) return;
+    if (message.content < 1023) return;
+    const Embed = new Discord.RichEmbed()
+      .setAuthor(client.user.username, client.user.avatarURL)
+      .setThumbnail(client.user.avatarURL).setDescription(`AntiBan
+Enabled:🟢 
+Maximum Ban : ${config[message.guild.id].banLimit}
+-
+AntiKick
+Enabled:🟢 
+Maximum Kick : ${config[message.guild.id].kickLimits}
+-
+AntiChannelD
+Enabled:🟢 
+Maximum Delete : ${config[message.guild.id].chaDelLimit}
+-
+AntiChannelC
+Enabled:🟢 
+Maximum Create : ${config[message.guild.id].chaCrLimit}
+-
+AntiRoleD
+Enabled:🟢 
+Maximum Delete : ${config[message.guild.id].roleDelLimit}
+-
+AntiRoleC
+Enabled:🟢 
+Maximum Create : ${config[message.guild.id].roleCrLimits}
+-
+AntiTime
+Enabled:🟢 
+Maximum Time : ${config[message.guild.id].time}
+`);
+
+    message.channel.sendEmbed(Embed);
+  }
+});
 
 naqeb.on("message", async message => {
   if (message.content === prefix + "unbansall") {
