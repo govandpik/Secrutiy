@@ -554,7 +554,7 @@ naqeb.on("message", async message => {
 **${prefix}unlock**
 **${prefix}unbansall**
 **${prefix}movall**
-**[support](https://discord.gg/YzBDHBh)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)** - **[website](https://secruity.glitch.me/)**
+**[support](https://discord.gg/9PravbR)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)** - **[website](https://secruity.glitch.me/)**
        
     `)
     
