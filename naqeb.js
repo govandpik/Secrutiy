@@ -535,7 +535,7 @@ naqeb.on("message", async message => {
   if (message.content.startsWith(prefix + "help")) {
     /// security bot
     let help = new Discord.RichEmbed()
-      .setColor("#FF0000")
+      .setColor("#2e0000")
       .setTimestamp()
       .setFooter("Sponsored By: Secrutiy ")
 
@@ -626,7 +626,7 @@ naqeb.on("message", zaid => {
     const bot = new Discord.RichEmbed()
       .setTimestamp()
       .setFooter("Sponsored By: Secrutiy ")
-      .setColor("#FF0000")
+      .setColor("#2e0000")
     
 
 
@@ -659,7 +659,7 @@ naqeb.on("message", async message => {
       ba.forEach(ns => {
         message.guild.unban(ns);
         const embed = new Discord.RichEmbed()
-          .setColor("#FF0000")
+          .setColor("#2e0000")
           .setDescription(`**:white_check_mark: All bands were removed**`)
           .setFooter(
             "requested by" + message.author.username,
@@ -695,7 +695,7 @@ naqeb.on("message", message => {
 naqeb.on("message", async message => {
   if (message.content.startsWith(prefix + "invite")) {
     let invite = new Discord.RichEmbed()
-      .setColor("RANDOM")
+      .setColor("2e0000")
       .setAuthor(message.author.username, message.author.displayAvatarURL)
       .setThumbnail(message.author.avatarURL)
       .setTitle("click here to invite bots")
