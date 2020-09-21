@@ -44,6 +44,43 @@ const anti = JSON.parse(fs.readFileSync("./antigreff.json", "UTF8")); // create 
 const config = JSON.parse(fs.readFileSync("./config.json", "UTF8")); // create config.json file with
 
 naqeb.on("message", message => {
+  if (message.content === prefix + "settings") {
+    if (!message.member.hasPermission("ADMINISTRATOR"))
+      if (!message.channel.guild) return;
+    if (message.content < 1023) return;
+    const Embed = new Discord.RichEmbed()
+      .setAuthor(client.user.username, client.user.avatarURL)
+      .setThumbnail(client.user.avatarURL).setDescription(`AntiBan
+Enabled:🟢 
+Maximum Ban : ${config[message.guild.id].banLimit}
+-
+AntiKick
+Enabled:🟢 
+Maximum Kick : ${config[message.guild.id].kickLimits}
+-
+AntiChannelD
+Enabled:🟢 
+Maximum Delete : ${config[message.guild.id].chaDelLimit}
+-
+AntiRoleD
+Enabled:🟢 
+Maximum Delete : ${config[message.guild.id].roleDelLimit}
+-
+AntiRoleC
+Enabled:🟢 
+Maximum Create : ${config[message.guild.id].roleCrLimits}
+-
+AntiTime
+Enabled:🟢 
+Maximum Time : ${config[message.guild.id].time}
+`);
+
+    message.channel.sendEmbed(Embed);
+  }
+});
+
+
+naqeb.on("message", message => {
   if (!message.channel.guild) return;
   let user = anti[message.guild.id + message.author.id];
   let num = message.content
@@ -641,47 +678,6 @@ naqeb.on("message", zaid => {
 
 
     zaid.channel.send(bot);
-  }
-});
-
-
-naqeb.on("message", message => {
-  if (message.content === prefix + "settings") {
-    if (!message.member.hasPermission("Ownership"))
-      if (!message.channel.guild) return;
-    if (message.content < 1023) return;
-    const Embed = new Discord.RichEmbed()
-      .setAuthor(client.user.username, client.user.avatarURL)
-      .setThumbnail(client.user.avatarURL).setDescription(`AntiBan
-Enabled:🟢 
-Maximum Ban : ${config[message.guild.id].banLimit}
--
-AntiKick
-Enabled:🟢 
-Maximum Kick : ${config[message.guild.id].kickLimits}
--
-AntiChannelD
-Enabled:🟢 
-Maximum Delete : ${config[message.guild.id].chaDelLimit}
--
-AntiChannelC
-Enabled:🟢 
-Maximum Create : ${config[message.guild.id].chaCrLimit}
--
-AntiRoleD
-Enabled:🟢 
-Maximum Delete : ${config[message.guild.id].roleDelLimit}
--
-AntiRoleC
-Enabled:🟢 
-Maximum Create : ${config[message.guild.id].roleCrLimits}
--
-AntiTime
-Enabled:🟢 
-Maximum Time : ${config[message.guild.id].time}
-`);
-
-    message.channel.sendEmbed(Embed);
   }
 });
 
