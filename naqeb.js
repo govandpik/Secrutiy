@@ -49,7 +49,6 @@ naqeb.on("message", message => {
       if (!message.channel.guild) return;
     if (message.content < 1023) return;
     const Embed = new Discord.RichEmbed()
-      .setColor("2e0000")
       .setAuthor(naqeb.user.username, naqeb.user.avatarURL)
       .setThumbnail(naqeb.user.avatarURL).setDescription(`AntiBan
 Enabled:🟢 
