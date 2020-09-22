@@ -727,6 +727,33 @@ naqeb.on("message", message => {
   }
 });
 
+
+naqeb.on('message', message => {
+ 
+if(message.content.includes("@everyone")){
+if(!message.member.hasPermission('KICK_MEMBERS')){
+message.delete(); 
+message.reply("tkaya everyoune lemada kick dakrey")
+}
+ 
+}
+ 
+});
+ 
+ 
+naqeb.on('message', message => {
+ 
+if(message.content.includes("@everyone@everyone")){
+if(!message.member.hasPermission('KICK_MEMBERS')){
+message.delete(); 
+message.reply("tkaya everyone lemada kick dakreyt")
+}
+ 
+}
+ 
+});
+
+
 naqeb.on("message", async message => {
   if (message.content.startsWith(prefix + "invite")) {
     let invite = new Discord.RichEmbed()
