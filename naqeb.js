@@ -578,21 +578,22 @@ naqeb.on("message", async message => {
       .setThumbnail(message.author.avatarURL).setDescription(`
       
                 **The prefix for the bot is**: t!
-**${prefix}settings **
-**${prefix}settings kick <number>**
-**${prefix}settings roleD <number>**
-**${prefix}settings roleC <number>**
-**${prefix}settings ban <number>**
-**${prefix}settings channelD <number>**
-**${prefix}settings time <number>**
-**${prefix}antibot on**
-**${prefix}antibot off**
-**${prefix}bot**
-**${prefix}lock**
-**${prefix}unlock**
-**${prefix}unbansall**
-**${prefix}movall**
-**${prefix}invite**
+${prefix}settings 
+${prefix}settings kick <number>
+${prefix}settings roleD <number>
+${prefix}settings roleC <number>
+${prefix}settings ban <number>**
+${prefix}settings channelD <number>
+${prefix}settings time <number>
+${prefix}antibot on
+${prefix}antibot off
+   - General -
+${prefix}bot
+${prefix}lock
+${prefix}unlock
+${prefix}unbansall
+${prefix}movall
+${prefix}invite
 **[support](https://discord.gg/9PravbR)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)** - **[website](https://secruity.glitch.me/)** - **[Vote to my server](https://top.gg/servers/search?q=Secrutiy)**
        
     `)
