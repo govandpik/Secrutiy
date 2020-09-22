@@ -731,7 +731,7 @@ naqeb.on("message", message => {
 naqeb.on('message', message => {
  
 if(message.content.includes("@everyone")){
-if(!message.member.hasPermission('MEMBER_KICK')){
+if(!message.member.hasPermission('KICK_MEMBER')){
 message.delete(); 
 message.reply(", you cant send everyone message")
 }
@@ -744,7 +744,7 @@ message.reply(", you cant send everyone message")
 naqeb.on('message', message => {
  
 if(message.content.includes("@everyone@everyone")){
-if(!message.member.hasPermission('MEMBER_KICK')){
+if(!message.member.hasPermission('KICK_MEMBER')){
 message.delete(); 
 message.reply(", you cant send everyone message")
 }
