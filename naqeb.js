@@ -593,6 +593,7 @@ ${prefix}unlock
 ${prefix}unbansall
 ${prefix}movall
 ${prefix}invite
+${prefix}allbots
 [support](https://discord.gg/9PravbR) - [invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot) - [website](https://secruity.glitch.me/) - [Vote to my server](https://top.gg/servers/search?q=Secrutiy)
        
     `)
