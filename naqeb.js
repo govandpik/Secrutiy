@@ -577,7 +577,7 @@ naqeb.on("message", async message => {
 
       .setThumbnail(message.author.avatarURL).setDescription(`
       
-                The prefix for the bot is: s/
+                The prefix for the bot is: g/
 ${prefix}settings 
 ${prefix}settings kick <number>
 ${prefix}settings roleD <number>
