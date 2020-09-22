@@ -4,7 +4,7 @@ const invites = {};
 const wait = require("util").promisify(setTimeout);
 const moment = require("moment");
 const fs = require("fs");
-var prefix = "s/";
+var prefix = "g/";
 
 
 
@@ -15,7 +15,7 @@ var prefix = "s/";
 
 naqeb.on('ready', () => {
   console.log(`Logged in as ${naqeb.user.tag}!`);
- naqeb.user.setActivity("s/help",{type: 'Playing'})
+ naqeb.user.setActivity("g/help",{type: 'Playing'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -577,7 +577,7 @@ naqeb.on("message", async message => {
 
       .setThumbnail(message.author.avatarURL).setDescription(`
       
-                **The prefix for the bot is**: s/
+                The prefix for the bot is: s/
 ${prefix}settings 
 ${prefix}settings kick <number>
 ${prefix}settings roleD <number>
@@ -593,7 +593,7 @@ ${prefix}unlock
 ${prefix}unbansall
 ${prefix}movall
 ${prefix}invite
-**[support](https://discord.gg/9PravbR)** - **[invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot)** - **[website](https://secruity.glitch.me/)** - **[Vote to my server](https://top.gg/servers/search?q=Secrutiy)
+[support](https://discord.gg/9PravbR) - [invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot) - [website](https://secruity.glitch.me/) - [Vote to my server](https://top.gg/servers/search?q=Secrutiy)
        
     `)
     
@@ -605,7 +605,7 @@ ${prefix}invite
 const db = require("quick.db"); // npm i quick.db
 
 naqeb.on("message", async message => {
-  const prefix = "s/"; //comand
+  const prefix = "g/"; //comand
  
   if (message.author.bot) return;
   if (!message.guild) return;
@@ -740,7 +740,7 @@ naqeb.on("message", async message => {
 });
 
 naqeb.on("ready", () => {
-  naqeb.user.setActivity("s/help | it's time secruity to your server!", { type: "Playing" });
+  naqeb.user.setActivity("g/help | it's time secruity to your server!", { type: "Playing" });
   naqeb.user.setStatus("Playing");
 });
 
