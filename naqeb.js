@@ -593,7 +593,6 @@ ${prefix}unlock
 ${prefix}unbansall
 ${prefix}movall
 ${prefix}invite
-${prefix}allbots
 [support](https://discord.gg/9PravbR) - [invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot) - [website](https://secruity.glitch.me/) - [Vote to my server](https://top.gg/servers/search?q=Secrutiy)
        
     `)
@@ -753,30 +752,6 @@ message.reply(", you cant send everyone message")
 }
  
 });
-
-
-naqeb.on('message', message => {
-     if(!message.channel.guild) return;
-                if(message.content == prefix + 'allbots') {
-
-
-    if (message.author.bot) return;
-    let i = 1;
-        const botssize = message.guild.members.filter(m=>m.user.bot).map(m=>`${i++} - <@${m.id}>`);
-          const embed = new Discord.RichEmbed()
-          .setAuthor(message.author.tag, message.author.avatarURL)
-          .setDescription(`**Found ${message.guild.members.filter(m=>m.user.bot).size} bots in this Server**
-${botssize.join('\n')}`)
-.setFooter(client.user.username, client.user.avatarURL)
-.setTimestamp();
-message.channel.send(embed)
-
-}
-
-
-});
-
-
 
 
 naqeb.on("message", async message => {
