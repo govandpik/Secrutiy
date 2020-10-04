@@ -593,7 +593,6 @@ ${prefix}unlock
 ${prefix}unbansall
 ${prefix}movall
 ${prefix}invite
-${prefix}clear
 [support](https://discord.gg/9PravbR) - [invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot) - [website](https://secruity.glitch.me/) - [Vote to my server](https://top.gg/servers/search?q=Secrutiy)
        
     `)
@@ -645,43 +644,6 @@ naqeb.on("guildMemberAdd", async member => {
   if (antibot === "on") {
     if (member.user.bot) member.kick("Anti bot is on !");
   }
-});
-
-
- 
-
-client.on("message", message => {
-if (message.content.split(" ")[0].toLowerCase() === prefix + "clear") {
-const word = message.content;
-const number = word.slice(7, word.length);
-const int = Number(number);
-if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-return message.channel.send(
-"You need a `MANAGE_MESSAGE`To crlear massage"
-);
-}
-if (int >= 101) {
-return message.channel.send(
-"You can't delete more than 100 chats."
-);
-}
-if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-return message.channel.send(
-"Looks like you dont have the permissions to do that"
-);
-}
-if (int == "1000") {
- 
-return message.channel.send("supply A Number to Delete");
-} else if (isNaN(int)) {
-return message.reply("Must be a number");
-}
-message.channel.bulkDelete(int).then(() => {
-return message.channel
-.send(`Cleared ${int} messages.`)
-.then(m => m.delete(5000));
-});
-}
 });
  
 
