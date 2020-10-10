@@ -664,7 +664,7 @@ naqeb.on("message", zaid => {
 
       .addField("**Name**", `${naqeb.user.tag} `, true)
        
-      .addField("**ID**",` 719159661470810133 `, true)
+      .addField("**ID Bot**",` 719159661470810133 `, true)
     
       .addField("**Server**", `${naqeb.guilds.size}`, true)
 
