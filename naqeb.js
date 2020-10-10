@@ -763,7 +763,7 @@ naqeb.on("message", async message => {
 });
 
 naqeb.on("ready", () => {
-  naqeb.user.setActivity("g/help | it's time secruity to your server!", { type: "Playing" });
+  naqeb.user.setActivity("j/help | it's time secruity to your server!", { type: "Playing" });
   naqeb.user.setStatus("Playing");
 });
 
