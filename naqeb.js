@@ -584,7 +584,7 @@ ${prefix}settings
 ${prefix}settings kick <number>
 ${prefix}settings roleD <number>
 ${prefix}settings roleC <number>
-${prefix}settings ban <number>**
+${prefix}settings ban <number>
 ${prefix}settings channelD <number>
 ${prefix}settings time <number>
 ${prefix}antibot on
