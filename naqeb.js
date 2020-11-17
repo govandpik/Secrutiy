@@ -595,7 +595,6 @@ ${prefix}unlock
 ${prefix}unbansall
 ${prefix}movall
 ${prefix}invite
-[support](https://discord.gg/9PravbR) - [invite](https://discord.com/api/oauth2/authorize?client_id=719159661470810133&permissions=8&scope=bot) - [website](https://secruity.glitch.me/) - [Vote to my server](https://top.gg/servers/search?q=Secrutiy)
        
     `)
     
@@ -671,8 +670,6 @@ naqeb.on("message", zaid => {
       .addField("**Server**", `${naqeb.guilds.size}`, true)
 
       .addField("**Members**", `${naqeb.users.size} `, true)
-
-      .addField("**Owner**",`<@605816441677152266> `)
 
 
     zaid.channel.send(bot);
@@ -801,4 +798,4 @@ naqeb.on("message", message => {
   }
 });
 
-naqeb.login("NzE5MTU5NjYxNDcwODEwMTMz.XtzXoA.WwHiFnrV8uNfjgJeo3mHuLx7vW4");
+naqeb.login("Nzc4MjMyNTM2NTYzOTc0MTQ0.X7O_hw.T_3KVAalCoUCiHhmJx6N3XeRhyA");
